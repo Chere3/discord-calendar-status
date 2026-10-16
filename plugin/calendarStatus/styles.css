@@ -1,0 +1,276 @@
+.vc-calstatus-agenda {
+    --vc-calstatus-text: var(--text-default, var(--text-normal));
+    --vc-calstatus-muted: var(--text-muted);
+    --vc-calstatus-line: var(--border-subtle, rgb(128 128 128 / 20%));
+    --vc-calstatus-raised: var(--background-mod-subtle, rgb(128 128 128 / 8%));
+
+    color: var(--vc-calstatus-text);
+    border: 1px solid var(--vc-calstatus-line);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.vc-calstatus-agenda button {
+    all: unset;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.vc-calstatus-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--vc-calstatus-line);
+    font-size: 14px;
+}
+
+.vc-calstatus-header span {
+    color: var(--vc-calstatus-muted);
+    font-size: 12px;
+}
+
+.vc-calstatus-scroll {
+    max-height: 460px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(128 128 128 / 40%) transparent;
+}
+
+.vc-calstatus-day {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin: 0;
+    padding: 6px 14px;
+    background: var(--background-base-lower, var(--background-secondary));
+    border-bottom: 1px solid var(--vc-calstatus-line);
+    color: var(--vc-calstatus-muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.vc-calstatus-row {
+    border-bottom: 1px solid var(--vc-calstatus-line);
+    border-left: 3px solid var(--vc-calstatus-color);
+}
+
+.vc-calstatus-row.vc-calstatus-live,
+.vc-calstatus-row.vc-calstatus-open {
+    background: var(--vc-calstatus-raised);
+}
+
+.vc-calstatus-row-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-right: 14px;
+}
+
+.vc-calstatus-agenda .vc-calstatus-row-body {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    gap: 12px;
+    padding: 8px 0 8px 11px;
+}
+
+.vc-calstatus-time {
+    display: flex;
+    flex-direction: column;
+    width: 42px;
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.vc-calstatus-time small {
+    color: var(--vc-calstatus-muted);
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.vc-calstatus-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.vc-calstatus-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.vc-calstatus-off .vc-calstatus-title,
+.vc-calstatus-off .vc-calstatus-time {
+    color: var(--vc-calstatus-muted);
+    text-decoration: line-through;
+}
+
+.vc-calstatus-tag {
+    color: var(--vc-calstatus-muted);
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.vc-calstatus-tag-custom,
+.vc-calstatus-tag-live {
+    padding: 0 6px;
+    border-radius: 8px;
+    background: var(--vc-calstatus-raised);
+    line-height: 16px;
+}
+
+.vc-calstatus-tag-live {
+    background: var(--brand-500);
+    color: #fff;
+}
+
+.vc-calstatus-preview {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+    color: var(--vc-calstatus-muted);
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.vc-calstatus-dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.vc-calstatus-dot-dnd { background: #f23f43; }
+.vc-calstatus-dot-idle { background: #f0b232; }
+.vc-calstatus-dot-online { background: #23a55a; }
+.vc-calstatus-dot-invisible { background: #80848e; }
+
+.vc-calstatus-off .vc-calstatus-dot {
+    background: transparent;
+    box-shadow: inset 0 0 0 1.5px var(--vc-calstatus-muted);
+}
+
+.vc-calstatus-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 4px 14px 12px 11px;
+}
+
+.vc-calstatus-segmented {
+    display: flex;
+    gap: 2px;
+    padding: 2px;
+    border-radius: 8px;
+    background: var(--vc-calstatus-raised);
+}
+
+.vc-calstatus-agenda .vc-calstatus-segmented button {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 5px 8px;
+    border-radius: 6px;
+    color: var(--vc-calstatus-muted);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.vc-calstatus-agenda .vc-calstatus-segmented button.vc-calstatus-selected {
+    background: var(--background-surface-high, var(--background-floating, rgb(128 128 128 / 30%)));
+    color: var(--vc-calstatus-text);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+}
+
+.vc-calstatus-fields {
+    display: grid;
+    grid-template-columns: 64px 1fr 96px 96px;
+    gap: 8px;
+}
+
+.vc-calstatus-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+    color: var(--vc-calstatus-muted);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.vc-calstatus-field input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid var(--vc-calstatus-line);
+    border-radius: 6px;
+    background: var(--input-background, rgb(0 0 0 / 15%));
+    color: var(--vc-calstatus-text);
+    font: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    color-scheme: light dark;
+}
+
+.vc-calstatus-field input:focus {
+    outline: none;
+    border-color: var(--brand-500);
+}
+
+.vc-calstatus-field-emoji input {
+    text-align: center;
+    font-size: 16px;
+}
+
+.vc-calstatus-editor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    color: var(--vc-calstatus-muted);
+    font-size: 11px;
+}
+
+.vc-calstatus-editor-footer code {
+    font-size: 11px;
+}
+
+.vc-calstatus-agenda .vc-calstatus-reset {
+    flex-shrink: 0;
+    padding: 4px 10px;
+    border-radius: 6px;
+    color: var(--text-danger, #f23f43);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.vc-calstatus-agenda .vc-calstatus-reset:hover {
+    background: var(--vc-calstatus-raised);
+}
+
+.vc-calstatus-agenda .vc-calstatus-reset:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.vc-calstatus-empty {
+    padding: 20px 14px;
+    color: var(--text-muted);
+    font-size: 13px;
+    text-align: center;
+}

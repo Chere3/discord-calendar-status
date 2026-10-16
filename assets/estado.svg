@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="300" viewBox="0 0 920 300" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="920" height="300" rx="20" fill="#F5F2EA"/>
+
+  <!-- Calendario -->
+  <text x="48" y="58" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#6B665D">Calendar.app · ahora 19:35</text>
+  <rect x="48" y="76" width="320" height="176" rx="14" fill="#FFFFFF" stroke="#E2DCCF"/>
+  <text x="68" y="106" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#9A9488">18:00</text>
+  <line x1="112" y1="102" x2="348" y2="102" stroke="#EEE9DF"/>
+  <text x="68" y="166" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#9A9488">19:30</text>
+  <rect x="112" y="162" width="236" height="60" rx="8" fill="#7986CB"/>
+  <text x="126" y="190" font-size="15" font-weight="600" fill="#FFFFFF">Clase de inglés</text>
+  <text x="126" y="210" font-size="13" fill="#FFFFFF" fill-opacity="0.85">19:30 – 21:00 · Virtual</text>
+  <text x="68" y="226" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#9A9488">21:00</text>
+  <line x1="112" y1="222" x2="348" y2="222" stroke="#EEE9DF"/>
+  <line x1="112" y1="166" x2="348" y2="166" stroke="#D50000" stroke-width="1.5"/>
+  <circle cx="112" cy="166" r="4" fill="#D50000"/>
+
+  <!-- Flecha -->
+  <path d="M396 164 H500" stroke="#1F1D1A" stroke-width="2" fill="none"/>
+  <path d="M492 156 L502 164 L492 172" stroke="#1F1D1A" stroke-width="2" fill="none"/>
+  <text x="448" y="148" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#6B665D">cada 30 s</text>
+
+  <!-- Perfil de Discord -->
+  <text x="532" y="58" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#6B665D">Discord · tu perfil</text>
+  <rect x="532" y="76" width="340" height="176" rx="14" fill="#FFFFFF" stroke="#E2DCCF"/>
+  <rect x="532" y="76" width="340" height="56" rx="14" fill="#5865F2"/>
+  <rect x="532" y="118" width="340" height="14" fill="#5865F2"/>
+  <circle cx="584" cy="136" r="30" fill="#FFFFFF"/>
+  <circle cx="584" cy="136" r="25" fill="#C9CDFB"/>
+  <circle cx="604" cy="156" r="10" fill="#FFFFFF"/>
+  <circle cx="604" cy="156" r="7" fill="#F23F43"/>
+  <rect x="600" y="155" width="8" height="2.4" rx="1.2" fill="#FFFFFF"/>
+  <text x="556" y="196" font-size="17" font-weight="700" fill="#1F1D1A">tu_usuario</text>
+  <text x="556" y="220" font-size="14" fill="#1F1D1A">📅 Clase de inglés hasta 21:00</text>
+  <text x="556" y="240" font-size="12" fill="#6B665D">No molestar · se quita solo a las 21:00</text>
+</svg>
