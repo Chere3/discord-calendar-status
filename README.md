@@ -1,3 +1,5 @@
+![discord-calendar-status: tu estado de Discord sigue a tu calendario](assets/banner.svg)
+
 # discord-calendar-status
 
 **Tu estado de Discord, sincronizado con tu calendario, como en Slack.** Mientras tienes un evento en curso pone No molestar y «📅 Título hasta HH:MM». Cuando termina, deja todo como estaba.
@@ -16,6 +18,8 @@ Slack lo hace solo con Google Calendar; Discord no. Esto lee los calendarios que
 - Si estás en Invisible, no toca nada.
 
 ## Cómo funciona
+
+![De Calendar.app al estado de Discord: lector en Swift, state.json y plugin en Vesktop](assets/flujo.svg)
 
 1. `calendar/main.swift` lee Calendar.app por EventKit y escribe los eventos con hora de los próximos 7 días en `~/Library/Application Support/discord-calendar-status/state.json`. Lo ejecuta launchd cada 60 s (`com.diego.discord-calendar-status`).
 2. `plugin/calendarStatus/` es un userplugin de Vencord que lee ese archivo cada 30 s, decide qué evento está en curso y cambia el estado desde dentro de Vesktop.
